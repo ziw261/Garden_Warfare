@@ -7,7 +7,14 @@
         <e p="Scripts" t="Include">
           <e p="Attacker.cs" t="Include" />
           <e p="AttackerSpawner.cs" t="Include" />
+          <e p="Defender.cs" t="Include" />
+          <e p="DefenderButton.cs" t="Include" />
+          <e p="DefenderSpawner.cs" t="Include" />
+          <e p="Health.cs" t="Include" />
           <e p="LevelLoad.cs" t="Include" />
+          <e p="Projectile.cs" t="Include" />
+          <e p="Shooter.cs" t="Include" />
+          <e p="StarDisplay.cs" t="Include" />
         </e>
       </e>
       <e p="Glitch-Garden.sln" t="IncludeFlat" />
