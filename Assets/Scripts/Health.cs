@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/**
+ *  Health.cs
+ *  Main Function
+ *     1) Track current health
+ *     2) Decrease health
+ */
+
 public class Health : MonoBehaviour {
 
     [SerializeField] private float health = 100f;
