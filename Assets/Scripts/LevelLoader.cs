@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelLoad : MonoBehaviour
+public class LevelLoader : MonoBehaviour
 {
     int currentSceneIndex;
     [SerializeField] int timeToWait = 4;
@@ -21,8 +21,31 @@ public class LevelLoad : MonoBehaviour
         LoadNextScene();
     }
 
+
+    public void LoadMainMenu() {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Start Screen");
+    }
+    
+    
+    
+    public void RestartScene() {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+    
+    
     public void LoadNextScene() {
         SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
+
+    public void LoadLose() {
+        SceneManager.LoadScene("Lose Screen");
+    }
+
+    public void QuitGame() {
+        Application.Quit();
     }
 
     // Update is called once per frame

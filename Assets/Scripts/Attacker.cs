@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +17,19 @@ public class Attacker : MonoBehaviour {
     
     [Range (0f, 5f)] [SerializeField] private float currentSpeed = 1f;
     private GameObject currentTarget;
-    
+
+    private void Awake() {
+        FindObjectOfType<LevelController>().AttackerSpawned();
+    }
+
+    private void OnDestroy() {
+
+        LevelController levelController = FindObjectOfType<LevelController>();
+
+        if (levelController != null) {
+            levelController.AttackerKilled();
+        }
+    }
 
     // Update is called once per frame
     void Update() {
