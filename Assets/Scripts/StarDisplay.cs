@@ -2,19 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 
 public class StarDisplay : MonoBehaviour {
 
-    [SerializeField] private int stars = 100;
+    [SerializeField] private float baseStars = 1000;
+    private float stars;
     private Text starText;
+   
+    
     
     // Start is called before the first frame update
     void Start() {
+        stars = baseStars - PlayerPrefsController.GetDifficulty() * 300;
+        if (stars <= 0) {
+            stars = 0;
+        }
         starText = GetComponent<Text>();
         UpdateDisplay();
     }
+
+    
 
     private void UpdateDisplay() {
         starText.text = stars.ToString();

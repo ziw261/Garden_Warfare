@@ -179,11 +179,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 1711944470741167292, guid: c705bfbcb55434cb8bc9a4125eccb2ce,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2922402027845091166, guid: c705bfbcb55434cb8bc9a4125eccb2ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -352,11 +347,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 1711944470741167292, guid: c705bfbcb55434cb8bc9a4125eccb2ce,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2922402027845091166, guid: c705bfbcb55434cb8bc9a4125eccb2ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -460,10 +450,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3311772cf9f74ddd9a57b554095b7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpawnDelay: 8
-  maxSpawnDelay: 15
+  minSpawnDelay: 2
+  maxSpawnDelay: 5
   attackerPrefabArray:
-  - {fileID: 400190664117350928, guid: ce4a25c074caa447db386022712d613c, type: 3}
+  - {fileID: 5386464293531910038, guid: 668d6f89e91a74684ba535932fcd37bc, type: 3}
 --- !u!4 &1263334002 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2922402027845091166, guid: c705bfbcb55434cb8bc9a4125eccb2ce,
@@ -554,9 +544,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3311772cf9f74ddd9a57b554095b7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSpawnDelay: 10
-  maxSpawnDelay: 15
+  minSpawnDelay: 2
+  maxSpawnDelay: 5
   attackerPrefabArray:
+  - {fileID: 5386464293531910038, guid: 668d6f89e91a74684ba535932fcd37bc, type: 3}
   - {fileID: 400190664117350928, guid: ce4a25c074caa447db386022712d613c, type: 3}
 --- !u!4 &1430506885 stripped
 Transform:
@@ -608,11 +599,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1711944470741167292, guid: c705bfbcb55434cb8bc9a4125eccb2ce,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2922402027845091166, guid: c705bfbcb55434cb8bc9a4125eccb2ce,
         type: 3}
@@ -1092,14 +1078,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 413581105, guid: d6e42275c8cae499e93b431a3f7e8c2a, type: 3}
-      propertyPath: levelTime
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 721072445, guid: d6e42275c8cae499e93b431a3f7e8c2a, type: 3}
-      propertyPath: baseStars
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e42275c8cae499e93b431a3f7e8c2a, type: 3}
 --- !u!1001 &5189329860389437280
@@ -1223,39 +1201,16 @@ PrefabInstance:
         type: 3}
       propertyPath: defenderPrefab
       value: 
-      objectReference: {fileID: 2073530754645177411, guid: 78e89de7d13984be99aae4f5cd97eea4,
-        type: 3}
-    - target: {fileID: 5189329860968794210, guid: fda3e8e084c63424da02166abff216d8,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5189329860968794209, guid: fda3e8e084c63424da02166abff216d8,
         type: 3}
       propertyPath: defenderPrefab
       value: 
-      objectReference: {fileID: 236026400211164514, guid: d3c9887ca049544f199f8ea3f5669905,
-        type: 3}
-    - target: {fileID: 5189329861686737571, guid: fda3e8e084c63424da02166abff216d8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5189329861446563099, guid: fda3e8e084c63424da02166abff216d8,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5189329861446563098, guid: fda3e8e084c63424da02166abff216d8,
         type: 3}
       propertyPath: defenderPrefab
       value: 
-      objectReference: {fileID: 8929048554436116902, guid: ed317ae032ba540b986958264db1e3b3,
-        type: 3}
-    - target: {fileID: 5189329860303165896, guid: fda3e8e084c63424da02166abff216d8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda3e8e084c63424da02166abff216d8, type: 3}

@@ -1,0 +1,8 @@
+Developer Notes:
+	1) To adjust stars, go to Main Canvas star text
+	2) To adjust enemy, go to enemySpawners
+
+Future TODO:
+	1) Add more enemies, like ghost
+	2) Add more defender, like ghostkiller(?)
+	

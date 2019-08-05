@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,21 @@ public class Health : MonoBehaviour {
 
     [SerializeField] private float health = 100f;
     [SerializeField] private GameObject deathVFX;
+    private GameObject deathVfxParent;
+    private const string DEATHVFX_PARENT_NAME = "DeathVfx";
+
+
+    private void Start() {
+        CreateDeathVfxParent();
+    }
+
+    private void CreateDeathVfxParent() {
+        deathVfxParent = GameObject.Find(DEATHVFX_PARENT_NAME);
+        if (!deathVfxParent) {
+            deathVfxParent = new GameObject(DEATHVFX_PARENT_NAME);
+        }
+    }
+
 
     public void DealDamage(float damage) {
         health -= damage;
@@ -29,6 +45,7 @@ public class Health : MonoBehaviour {
         }
 
         GameObject deathVFXObject = Instantiate(deathVFX, transform.position, transform.rotation);
+        deathVFXObject.transform.parent = deathVfxParent.transform;
         Destroy(deathVFXObject, 1f);
     }
 }

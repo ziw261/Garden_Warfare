@@ -5,6 +5,21 @@ using UnityEngine;
 public class DefenderSpawner : MonoBehaviour {
 
     private Defender defender;
+    private GameObject defenderParent;
+    private const string DEFENDER_PARENT_NAME = "Defenders";
+    
+
+    private void Start() {
+        CreateDefenderParent();
+    }
+
+    private void CreateDefenderParent() {
+        defenderParent = GameObject.Find(DEFENDER_PARENT_NAME);
+        if (!defenderParent) {
+            defenderParent = new GameObject(DEFENDER_PARENT_NAME);
+        }
+    }
+
     private void OnMouseDown() {
         AttemptToPlaceDefenderAt(GetSquareClicked());
         //Debug.Log("Mouse is clicked");
@@ -43,6 +58,7 @@ public class DefenderSpawner : MonoBehaviour {
     private void SpawnDefender(Vector2 coordinate) {
         
         Defender newDefender = Instantiate(defender, coordinate, Quaternion.identity) as Defender;
+        newDefender.transform.parent = defenderParent.transform;
         //Debug.Log(coordinate);
     }
 }
