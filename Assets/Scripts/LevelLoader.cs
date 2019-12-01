@@ -42,7 +42,12 @@ public class LevelLoader : MonoBehaviour
     
     
     public void LoadNextScene() {
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        if (currentSceneIndex == 4) {
+            SceneManager.LoadScene(1);
+        } else {
+            SceneManager.LoadScene(currentSceneIndex + 1);
+        }
+
     }
 
 
